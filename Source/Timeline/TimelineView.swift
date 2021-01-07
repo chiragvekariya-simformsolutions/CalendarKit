@@ -305,7 +305,7 @@ public final class TimelineView: UIView {
             if rightToLeft {
                 return bounds.width - 53
             } else {
-                return 53
+                return 53 + style.separatorLeadingSpace
             }
         }()
         let xEnd: CGFloat = {
@@ -404,7 +404,7 @@ public final class TimelineView: UIView {
         x = attributes.frame.minX
       }
         
-      eventView.frame = CGRect(x: x,
+      eventView.frame = CGRect(x: x + style.separatorLeadingSpace,
                                y: attributes.frame.minY,
                                width: attributes.frame.width - style.eventGap,
                                height: attributes.frame.height - style.eventGap)

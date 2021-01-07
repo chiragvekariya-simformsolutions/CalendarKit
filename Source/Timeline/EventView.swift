@@ -3,6 +3,7 @@ import UIKit
 open class EventView: UIView {
   public var descriptor: EventDescriptor?
   public var color = SystemColors.label
+  public var cornerRadius: CGFloat = 10 //Added by chirag
 
   public var contentHeight: CGFloat {
     return textView.frame.height
@@ -31,10 +32,14 @@ open class EventView: UIView {
   }
 
   private func configure() {
-    clipsToBounds = false
+    if self.cornerRadius > 0 { //Start ==> Added by chirag
+        clipsToBounds = true
+        layer.cornerRadius = self.cornerRadius
+    } else {
+        clipsToBounds = false
+    } // End
     color = tintColor
     addSubview(textView)
-    layer.cornerRadius = 10
     for (idx, handle) in eventResizeHandles.enumerated() {
       handle.tag = idx
       addSubview(handle)
