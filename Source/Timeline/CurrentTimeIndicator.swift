@@ -111,7 +111,7 @@ import UIKit
             x = leadingInset - padding
         }
         
-        return CGRect(x: x, y: bounds.height / 2, width: bounds.width - leadingInset, height: 1)
+        return CGRect(x: x, y: bounds.height / 2, width: bounds.width - leadingInset, height: style.lineHeight)
     }()
 
     circle.frame = {

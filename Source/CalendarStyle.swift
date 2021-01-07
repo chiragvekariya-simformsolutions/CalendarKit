@@ -80,6 +80,7 @@ public struct CurrentTimeIndicatorStyle {
   public var color = SystemColors.systemRed
   public var font = UIFont.systemFont(ofSize: 11)
   public var dateStyle : DateStyle = .system
+  public var lineHeight: CGFloat = 1
   public init() {}
 }
 
