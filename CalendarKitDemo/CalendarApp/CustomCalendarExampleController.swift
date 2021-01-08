@@ -55,7 +55,6 @@ class CustomCalendarExampleController: DayViewController {
 
   override func loadView() {
     calendar.timeZone = TimeZone(identifier: "Europe/Paris")!
-
     dayView = DayView(calendar: calendar)
     view = dayView
   }
