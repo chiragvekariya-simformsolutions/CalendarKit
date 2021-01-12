@@ -7,7 +7,7 @@ public final class Event: EventDescriptor {
   public var text = ""
   public var attributedText: NSAttributedString?
   public var lineBreakMode: NSLineBreakMode?
-  public var didAlphaEnable = true
+  public var didAlphaEnableOnBackgroundColor = true
   public var color = SystemColors.systemBlue {
     didSet {
       updateColors()
@@ -52,7 +52,7 @@ public final class Event: EventDescriptor {
   }
 
   private func applyStandardColors() {
-    if didAlphaEnable {
+    if didAlphaEnableOnBackgroundColor {
         backgroundColor = color.withAlphaComponent(0.3)
         var h: CGFloat = 0, s: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
         color.getHue(&h, saturation: &s, brightness: &b, alpha: &a)
