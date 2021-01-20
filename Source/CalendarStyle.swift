@@ -48,6 +48,7 @@ public struct DaySymbolsStyle {
   public var weekendColor = SystemColors.secondaryLabel
   public var weekDayColor = SystemColors.label
   public var font = UIFont.systemFont(ofSize: 10)
+  public var dayStyle = Calendar.autoupdatingCurrent.veryShortWeekdaySymbols // Added by chirag to update the day display style/formate of the day/
   public init() {}
 }
 
